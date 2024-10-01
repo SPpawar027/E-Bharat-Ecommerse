@@ -8,6 +8,9 @@ import { Track } from '../../components/track/Track'
 import Testimonial from '../../components/testimonial/Testimonial'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, deleteFromCart } from '../../redux/cartSlice'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Home = () => {
@@ -25,12 +28,9 @@ const Home = () => {
   
     return (
         <div>
-            
             <Layout>
-                  <div className="flex gap-5 justify-center">
-        <button className=' bg-gray-300 p-5' onClick={()=> addItem()}>add</button>
-        <button className=' bg-gray-300 p-5' onClick={()=> deleteItem()}>del</button>
-      </div>
+            <ToastContainer/>   
+             
               <HeroSection/>
               <Filter/>
               <ProuductCart/>
