@@ -6,7 +6,7 @@ import { Cart } from './pages/cart/Cart'
 import { Nopage } from './pages/nopage/Nopage'
 import Order from './pages/Order/Order'
 import MyState from './context/myState'
-import Login from "./pages/registration/Login"
+import Login from "./pages/registration/Login.jsx"
 import Signup from './pages/registration/Signup'
 import Productinfo from './pages/productinfo/Productinfo'
 import AddProduct from './pages/admin/Pages/Addproducts'

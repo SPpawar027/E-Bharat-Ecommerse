@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import myContext from '../../context/myContext'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../firebase/FirebaseConfige'
-import { toast } from 'react-toastify'
+
 import Loader from '../../components/Loading/Loader'
 
 function Login() {
@@ -21,7 +21,7 @@ function Login() {
             const result = await signInWithEmailAndPassword(auth , email , passward)
             console.log(result)
             localStorage.setItem("user" , JSON.stringify(result))
-            toast.success('Signin Successfully')
+         
                 
             navigate("/")
             setLoading(false);
@@ -29,7 +29,7 @@ function Login() {
         }
         catch(error){
             console.log(error)
-         toast.error('Sigin Failed')
+ 
             setLoading(false)
         }
 
