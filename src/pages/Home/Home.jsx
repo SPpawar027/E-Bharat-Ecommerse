@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Layout from '../../components/layout/Layout.jsx'
+
 import MyContext from '../../context/myContext'
 import HeroSection from '../../components/herosection/HeroSection'
 import Filter from '../../components/filter/Filter'
@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, deleteFromCart } from '../../redux/cartSlice'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Layout from '../../components/layout/Layout'
 
 
 
