@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import Layout from '../../components/layout/layout'
+import Layout from '../../components/layout/Layout'
 import myContext from '../../context/myContext'
 import Modal from '../../components/modal/Modal'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteFromCart } from '../../redux/CartSlice'
+import { deleteFromCart } from '../../redux/cartSlice'
 import { toast } from 'react-toastify'
 import { json } from 'react-router-dom'
 
