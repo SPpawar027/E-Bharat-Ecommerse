@@ -6,13 +6,14 @@ import { Cart } from './pages/cart/Cart'
 import { Nopage } from './pages/nopage/Nopage'
 import Order from './pages/Order/Order'
 import MyState from './context/myState'
-import Login from "./pages/registration/Login.jsx"
+
 import Signup from './pages/registration/Signup'
 import Productinfo from './pages/productinfo/Productinfo'
 import AddProduct from './pages/admin/Pages/Addproducts'
 import UpdateProduct from './pages/admin/Pages/Updateproduct'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Login from './pages/registration/Login.jsx'
 
 
 
