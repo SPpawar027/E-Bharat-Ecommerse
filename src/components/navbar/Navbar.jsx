@@ -19,7 +19,7 @@ export const Navbar = () => {
       window.location.href = "/login"
     }
     const cartItems = useSelector((state => state.cart))
-   console.log(cartItems)
+  //  console.log(cartItems)
  
     
     return (
