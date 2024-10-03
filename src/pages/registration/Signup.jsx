@@ -5,7 +5,8 @@ import { toast } from 'react-toastify'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth, firedb } from '../../firebase/FirebaseConfige'
 import { addDoc, collection, Timestamp } from 'firebase/firestore'
-import Loader from '../../components/Loading/Loading'
+import Loader from '../../components/Loading/Loader'
+
 
 function Signup() {
     const [name , setName]= useState("")
@@ -21,8 +22,8 @@ function Signup() {
         setLoading(true)
         if(name === "" || email === "" || passward === "")
         {
-            console.log("toast")
-             toast.error("All fields are required")
+           return toast.error("All fields are required")
+            
         }
         try{
             const users = await createUserWithEmailAndPassword(auth, email , passward)
@@ -39,8 +40,7 @@ function Signup() {
 
             const userref = collection(firedb , "users")
             await addDoc(userref , user)
-            console.log("empty")
-         
+            toast.success("Signup Succesfully")
             setEmail("")
             setName("")
             setPassward("")

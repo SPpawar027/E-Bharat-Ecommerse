@@ -16,7 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Home = () => {
      const dispatch = useDispatch()
      const cartItem = useSelector(state => state.cart)
-     console.log(cartItem)  
+    console.log(cartItem)
 
      const addItem = ()=>{
         dispatch(addToCart("shirt"))
