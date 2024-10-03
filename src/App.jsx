@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home/Home'
+import Home from './pages/Home/Home.jsx'
 import {Dashboard} from "./pages/admin/dashboard/Dashboard"
 import { Cart } from './pages/cart/Cart'
 import { Nopage } from './pages/nopage/Nopage'

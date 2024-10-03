@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Layout from '../../components/layout/layout'
+import Layout from '../../components/layout/layout.jsx'
 import MyContext from '../../context/myContext'
 import HeroSection from '../../components/herosection/HeroSection'
 import Filter from '../../components/filter/Filter'
