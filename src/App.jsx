@@ -14,6 +14,10 @@ import UpdateProduct from './pages/admin/Pages/Updateproduct'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/registration/Login.jsx'
+import Returnpolicy from './pages/footerpages/Returnpolicy.jsx'
+import Privacypolicy from './pages/footerpages/Privacypolicy.jsx'
+import Contact from './pages/footerpages/Contact.jsx'
+import About from './pages/footerpages/About.jsx'
 
 
 
@@ -37,6 +41,10 @@ const App = () => {
         </ProtectedRouteForAdmin>
         
         } />
+           <Route path='/about' element={<About/>}/>
+           <Route path='/contact' element={<Contact/>}/>
+           <Route path='/privacypolicy' element={<Privacypolicy/>}/>
+        <Route path='/returnpolicy' element={<Returnpolicy/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>

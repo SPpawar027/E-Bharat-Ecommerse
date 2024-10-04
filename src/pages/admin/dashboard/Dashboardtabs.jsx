@@ -9,7 +9,9 @@ import { Link } from 'react-router-dom';
 
 function DashboardTab() {
     const context = useContext(myContext)
-    const { mode ,product ,editHandle,UpdateProduct ,DeleteProduct} = context
+    const { mode ,product ,editHandle,UpdateProduct ,DeleteProduct
+      
+    } = context
     let [isOpen, setIsOpen] = useState(false)
     console.log(product)
     function closeModal() {

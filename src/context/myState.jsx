@@ -135,6 +135,10 @@ const MyState = (props) => {
     }
 
   }
+    const [searchkey, setSearchkey] = useState('')
+  const [filterType, setFilterType] = useState('')
+  const [filterPrice, setFilterPrice] = useState('')
+
 
   useEffect(()=>{
     getProductData()
@@ -142,7 +146,7 @@ const MyState = (props) => {
 
     return (
         <MyContext.Provider value={{toggleMode , mode ,Loading ,setLoading
-          ,products ,setProducts ,AddProducts ,product,editHandle,UpdateProduct ,DeleteProduct
+          ,products ,setProducts ,AddProducts ,product,editHandle,UpdateProduct ,DeleteProduct ,searchkey , setSearchkey ,filterPrice ,setFilterPrice , filterType ,setFilterType
         }}>
             {props.children}
         </MyContext.Provider>

@@ -6,6 +6,7 @@ import { BsFillCloudSunFill } from 'react-icons/bs'
 import { FiSun } from 'react-icons/fi'
 import { RxCross2 } from 'react-icons/rx'
 import { useSelector } from 'react-redux'
+
 export const Navbar = () => {
     const [open , setOpen] = useState(false)
 
@@ -20,6 +21,8 @@ export const Navbar = () => {
     }
     const cartItems = useSelector((state => state.cart))
   //  console.log(cartItems)
+
+
  
     
     return (
