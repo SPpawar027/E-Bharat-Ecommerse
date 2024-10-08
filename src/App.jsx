@@ -18,6 +18,7 @@ import Returnpolicy from './pages/footerpages/Returnpolicy.jsx'
 import Privacypolicy from './pages/footerpages/Privacypolicy.jsx'
 import Contact from './pages/footerpages/Contact.jsx'
 import About from './pages/footerpages/About.jsx'
+import Allproduct from './pages/allproduct/Allproduct.jsx'
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
   
     <Routes>
       <Route path='/' element={<Home/>}/>
+      <Route path='/allproducts' element={<Allproduct/>} />
       <Route path='/Order' element={
         <protectedRoute>
           <Order/>

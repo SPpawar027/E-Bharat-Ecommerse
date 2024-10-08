@@ -35,89 +35,90 @@ export const Cart = () => {
 
  const shipping = 100
  const grandTotal = shipping + totalAmount
+ console.log(cartitems)
 
-const [name, setName] = useState("")
-  const [address, setAddress] = useState("");
-  const [pincode, setPincode] = useState("")
-  const [phoneNumber, setPhoneNumber] = useState("")
- const buyNow = async()=>{
-     if (name === "" || address == "" || pincode == "" || phoneNumber == "") {
-      return toast.error("All fields are required", {
-        position: "top-center",
-        autoClose: 1000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      })
-    }
-        const addressInfo = {
-      name,
-      address,
-      pincode,
-      phoneNumber,
-      date: new Date().toLocaleString(
-        "en-US",
-        {
-          month: "short",
-          day: "2-digit",
-          year: "numeric",
-        }
-      )
-    }
-    var options = {
-    key: "",
-    key_secret: "",
-    amount: parseInt(grandTotal * 100),
-    currency: "INR",
-    order_receipt: 'order_rcptid_' + name,
-    name: "E-Bharat",
-    description: "for testing purpose",
-    handler: function (response) {
-        console.log(response)
-        toast.success('Payment Successful')
-    },
+// const [name, setName] = useState("")
+//   const [address, setAddress] = useState("");
+//   const [pincode, setPincode] = useState("")
+//   const [phoneNumber, setPhoneNumber] = useState("")
+//  const buyNow = async()=>{
+//      if (name === "" || address == "" || pincode == "" || phoneNumber == "") {
+//       return toast.error("All fields are required", {
+//         position: "top-center",
+//         autoClose: 1000,
+//         hideProgressBar: false,
+//         closeOnClick: true,
+//         pauseOnHover: true,
+//         draggable: true,
+//         progress: undefined,
+//         theme: "colored",
+//       })
+//     }
+//         const addressInfo = {
+//       name,
+//       address,
+//       pincode,
+//       phoneNumber,
+//       date: new Date().toLocaleString(
+//         "en-US",
+//         {
+//           month: "short",
+//           day: "2-digit",
+//           year: "numeric",
+//         }
+//       )
+//     }
+//     var options = {
+//     key: "",
+//     key_secret: "",
+//     amount: parseInt(grandTotal * 100),
+//     currency: "INR",
+//     order_receipt: 'order_rcptid_' + name,
+//     name: "E-Bharat",
+//     description: "for testing purpose",
+//     handler: function (response) {
+//         console.log(response)
+//         toast.success('Payment Successful')
+//     },
 
-    theme: {
-        color: "#3399cc"
-    }
-};
+//     theme: {
+//         color: "#3399cc"
+//     }
+// };
 
-        const paymentId = response.razorpay_payment_id
-          // store in firebase 
-        const orderInfo = {
-          cartItems,
-          addressInfo,
-          date: new Date().toLocaleString(
-            "en-US",
-            {
-              month: "short",
-              day: "2-digit",
-              year: "numeric",
-            }
-          ),
-          email: JSON.parse(localStorage.getItem("user")).user.email,
-          userid: JSON.parse(localStorage.getItem("user")).user.uid,
-          paymentId
-        }
-        try{
+//         const paymentId = response.razorpay_payment_id
+//           // store in firebase 
+//         const orderInfo = {
+//           cartitems,
+//           addressInfo,
+//           date: new Date().toLocaleString(
+//             "en-US",
+//             {
+//               month: "short",
+//               day: "2-digit",
+//               year: "numeric",
+//             }
+//           ),
+//           email: JSON.parse(localStorage.getItem("user")).user.email,
+//           userid: JSON.parse(localStorage.getItem("user")).user.uid,
+//           paymentId
+//         }
+//         try{
 
-          const result  = addDoc(collection(firedb , "orders"), orderInfo)
-        }
-        catch(error){
-          console.log(error)
-        }
+//           const result  = addDoc(collection(firedb , "orders"), orderInfo)
+//         }
+//         catch(error){
+//           console.log(error)
+//         }
 
-var pay = new window.Razorpay(options);
-pay.open();
-console.log(pay)
-
-
+// var pay = new window.Razorpay(options);
+// pay.open();
+// console.log(pay)
 
 
- }
+
+
+//  }
 
 
 
@@ -177,15 +178,15 @@ console.log(pay)
 
 
 <Modal 
-name={name} 
-address={address} 
-pincode={pincode} 
-phoneNumber={phoneNumber} 
-setName={setName} 
-setAddress={setAddress} 
-setPincode={setPincode} 
-setPhoneNumber={setPhoneNumber} 
-buyNow={buyNow} 
+// name={name} 
+// address={address} 
+// pincode={pincode}   
+// phoneNumber={phoneNumber} 
+// setName={setName} 
+// setAddress={setAddress} 
+// setPincode={setPincode} 
+// setPhoneNumber={setPhoneNumber} 
+// buyNow={buyNow} 
 />
           </div>
         </div>

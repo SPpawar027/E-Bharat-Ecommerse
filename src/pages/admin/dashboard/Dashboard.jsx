@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import Layout from '../../../components/layout/Layout'
 import myContext from '../../../context/myContext'
 import {FaUserTie } from 'react-icons/fa';
@@ -6,6 +6,9 @@ import DashboardTab from './Dashboardtabs';
 export const Dashboard = () => {
     const context  = useContext(myContext)
     const {mode  } = context;
+     useEffect(()=>{
+        window.scroll(0,0)
+    },[])
 
    return (
     <Layout>
